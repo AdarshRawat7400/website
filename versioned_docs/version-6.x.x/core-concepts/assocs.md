@@ -451,7 +451,7 @@ Ship.belongsTo(Captain, { foreignKey: 'bossId' }); // This creates the `bossId` 
 // Eager Loading is done by passing the model to `include`:
 console.log((await Ship.findAll({ include: Captain })).toJSON());
 // Or by providing the associated model name:
-console.log((await Ship.findAll({ include: 'Captain' })).toJSON());
+console.log((await Ship.findAll({ include: 'captain' })).toJSON());
 
 // Also, instances obtain a `getCaptain()` method for Lazy Loading:
 const ship = await Ship.findOne();
